@@ -36,7 +36,18 @@ app.use(notFound);
 
 // MANEJO GLOBAL DE ERRORES
 app.use(errorHandler);
-
+/*
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
+*/
+
+// Solo levantar servidor en local
+if (process.env.NODE_ENV !== "production") {
+  app.listen(PORT, () => {
+    console.log(`Servidor corriendo en http://localhost:${PORT}`);
+  });
+}
+
+// Exportar para Vercel
+export default app;
