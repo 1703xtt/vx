@@ -1,0 +1,7 @@
+node_modules/
+.env
+myxl5-key.json
+testEndpoints.js
+testEnv.js
+testFirebase.js
+testMiddlewares.js
