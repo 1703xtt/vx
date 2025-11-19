@@ -33,9 +33,6 @@ app.use("/auth", authRoutes);
 
 //ENTRAS https://vx-j91p0cl8b-1703xtts-projects.vercel.app --> REDIRIGE auth/login
 
-app.get("/", (req, res) => {
-  res.redirect("/auth/login");
-});
 
 // RUTAS NO ENCONTRADAS
 app.use(notFound);
